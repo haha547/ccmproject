@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+	<meta charset = "UTF-8"/>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/login.css"/>
+	<link rel = "Shortcut Icon " href = "/static/images/title.png" type="image/x-icon">
+</head>
+
+<body background="/static/images/momo.jpg">
+	<div class="loginbox">
+		<img src="/static/images/title.png" class="avatar">
+		<h1>機台資訊系統</h1>
+		<form>
+			<p>員工號碼</p>
+			<input type="text" name="account" placeholder="你的員工號碼">
+			<p>密碼</p>
+			<input type="password" name="password" placeholder="你的密碼">
+			<input type="submit" value="登錄">
+			<a href="http://127.0.0.1:8000/admin/">Admin login</a>
+		</form>
+	</div>
+</body>
+</html>
