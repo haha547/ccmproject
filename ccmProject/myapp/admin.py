@@ -1,5 +1,10 @@
 from django.contrib import admin
-from myapp.models import Employee
+
 # Register your models here.
 
-admin.site.register(Employee)
+'''class EmployeeAdmin(admin.ModelAdmin):
+    list_display = ('id','name','position','account','password')
+    list_filter = ('name','position')
+    search_fieldes = ('name',)
+    ordering = ('id',)
+admin.site.register(Employee,EmployeeAdmin)   ''' 

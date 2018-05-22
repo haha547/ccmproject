@@ -19,17 +19,19 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 
-from myapp.views import sayhello,bossPage,IEsPage,foremanPage,operPage,loginPage
+from myapp import views
 
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
-	url(r'^$',loginPage),
-	url(r'^boss/(\w+)/$',bossPage),
-	url(r'^IEs/(\w+)/$',IEsPage),
-	url(r'^foreman/(\w+)/$',foremanPage),
-	url(r'^oper/(\w+)/$',operPage),
-
+	url(r'^$',views.index),
+    url(r'^index/$', views.index),
+	url(r'^boss/(\w+)/$',views.bossPage),
+	url(r'^IEs/(\w+)/$',views.IEsPage),
+	url(r'^foreman/(\w+)/$',views.foremanPage),
+	url(r'^oper/(\w+)/$',views.operPage),
+    url(r'^login/$', views.login),
+    url(r'^logout/$', views.logout),
 
 ]
 if settings.DEBUG :
